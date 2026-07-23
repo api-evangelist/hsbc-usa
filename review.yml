@@ -1,0 +1,97 @@
+aid: hsbc-usa
+name: HSBC USA
+review:
+  question: Does HSBC USA expose a public, first-party US developer API with downloadable specifications?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    HSBC USA (HSBC Bank USA, N.A., an OCC-chartered national bank) does not
+    publish a US-specific first-party developer program. Its public API surface
+    is HSBC's GROUP-WIDE corporate and institutional Developer Portal at
+    developer.hsbc.com, which redirects to develop.hsbc.com and returned a live
+    HTTP 200. That portal (a Drupal-based "HSBC Developer Portal") documents
+    corporate transaction-banking products — Treasury Payment Initiation, Omni
+    Collect, PayMe for Business (Hong Kong), and UK Open Banking Account
+    Information — of which the globally-scoped wholesale products (Treasury
+    Payment Initiation, Omni Collect) are the ones relevant to HSBC USA's
+    corporate clients. HSBC exited US mass-market retail banking in 2022
+    (branches sold to Citizens and Cathay), refocusing US operations on
+    wholesale/institutional banking and wealth management, which is consistent
+    with the corporate-only API posture observed. No US-specific FDX
+    participation or CFPB Section 1033 data-access posture was located from
+    HSBC's own published materials; consumer-permissioned data for remaining US
+    accounts is aggregator-mediated (Plaid/MX/Akoya/Finicity networks) rather
+    than served by a documented first-party consumer data API.
+  developerPortal:
+    url: https://developer.hsbc.com
+    effectiveUrl: https://develop.hsbc.com/
+    httpStatus: 200
+    scope: HSBC group corporate & institutional (not US-specific)
+    registrationGated: true
+    note: |
+      API reference and specifications require portal registration/login
+      (/user/register, /user/login). No spec is reachable unauthenticated.
+  openapiHarvested: false
+  specProvenance: |
+    None. No publicly downloadable OpenAPI/Swagger/JSON/YAML specification was
+    found in the unauthenticated HTML of the portal home or any api-overview
+    page. Specs sit behind login, so openapi/ is intentionally empty.
+  authModel: |
+    Not publicly documented on unauthenticated pages. HSBC group corporate APIs
+    typically use OAuth2 client-credentials with mutual-TLS (mTLS) for the
+    transaction-banking channel, and the UK Open Banking API follows the OBIE
+    FAPI OAuth2/OIDC profile — but the specific auth for HSBC USA access could
+    not be confirmed without portal registration, so it is not asserted here.
+  fdxParticipation:
+    documented: false
+    note: No HSBC-published US FDX membership or FDX-conformant data-access API located.
+  section1033Posture:
+    documented: false
+    note: |
+      No HSBC USA published Section 1033 / Personal Financial Data Rights
+      posture located. The CFPB 1033 rule phases in for the largest banks from
+      April 2026; HSBC USA's compliance approach is not publicly stated in a
+      developer-facing form.
+  aggregatorAccess:
+    likely: true
+    firstPartyConsumerApi: false
+    note: |
+      Consistent with most US banks, consumer data access for HSBC USA accounts
+      is expected to be mediated by third-party aggregators rather than a
+      first-party API. Specific network membership was not confirmed.
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: true
+    note: Corporate transaction-banking products are REST/HTTPS, documented on the group portal (reference gated behind login).
+  - protocol: WebSocket
+    scheme: wss
+    documented: false
+    note: No WebSocket surface documented.
+sources:
+- url: https://developer.hsbc.com
+  type: DeveloperPortal
+  note: Redirects to develop.hsbc.com; HTTP 200; "Welcome to HSBC Developer Portal".
+- url: https://develop.hsbc.com/api-overview/treasury-payment-initiation
+  type: Documentation
+  note: HTTP 200; corporate Treasury Payment Initiation API overview (reference gated).
+- url: https://develop.hsbc.com/api-overview/omni-collect-single-api
+  type: Documentation
+  note: HTTP 200; Omni Collect single-API overview (reference gated).
+- url: https://www.us.hsbc.com/
+  type: Website
+  note: HTTP 200; HSBC USA public site.
+- url: https://www.about.us.hsbc.com/newsroom/press-releases/hsbc-exits-us-mass-market-retail-banking
+  type: PressRelease
+  note: HSBC's own announcement of exit from US mass-market retail banking (2021-2022).
+actions:
+  openapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Identity plus honest capture of HSBC's group corporate Developer Portal as
+    the real (registration-gated) public API surface for HSBC USA wholesale
+    clients. No spec was harvestable and no first-party US consumer/data-access
+    API exists, so apis[] lists only the two globally-scoped corporate products
+    with real documentation URLs, and no OpenAPI was saved.
