@@ -1,0 +1,51 @@
+generated: '2026-07-23'
+method: searched
+source: live probes of HSBC group + US hosts
+notes: >-
+  HSBC does not run a US-specific developer host; the group Developer Portal
+  (developer.hsbc.com -> develop.hsbc.com) and the US retail host
+  (www.us.hsbc.com) expose no /.well-known discovery documents. The only
+  /.well-known artifact located across HSBC properties is the group-wide
+  RFC 9116 security.txt served at hsbc.com/.well-known/security.txt (saved
+  verbatim). Its Expires field (2026-05-01) is past but the document is still
+  live and the Bugcrowd VDP engagement it points to is active.
+hosts:
+- host: https://hsbc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: hsbc-usa-security.txt
+- host: https://developer.hsbc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+- host: https://develop.hsbc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+- host: https://www.us.hsbc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404

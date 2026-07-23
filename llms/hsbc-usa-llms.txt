@@ -1,0 +1,27 @@
+# HSBC USA
+
+> HSBC USA is the United States arm of HSBC Holdings plc, operating principally through HSBC Bank USA, N.A., an OCC-chartered national bank. After exiting US mass-market retail banking in 2022, HSBC refocused its US operations on global wholesale, commercial and corporate banking, global banking and markets, and wealth management for internationally connected clients. HSBC USA does not publish a US-specific first-party developer program; public API access is mediated through HSBC's group-wide corporate and institutional Developer Portal (developer.hsbc.com), whose transaction-banking API products serve US wholesale clients but require registration and login to reach the API reference and specifications. No publicly downloadable OpenAPI exists.
+
+## APIs
+- [Treasury - Payment Initiation](https://develop.hsbc.com/api-overview/treasury-payment-initiation): HSBC group corporate transaction-banking API for initiating outbound payments programmatically; documentation and specification behind portal login. Relevant to HSBC USA wholesale/corporate relationships.
+- [Omni Collect - Single API](https://develop.hsbc.com/api-overview/omni-collect-single-api): HSBC group corporate collections/receivables API consolidating multiple collection channels behind a single interface; documentation and specification behind portal login.
+
+## Docs
+- [HSBC Developer Portal](https://developer.hsbc.com): Group corporate & institutional developer portal (redirects to develop.hsbc.com).
+- [API Catalogue](https://develop.hsbc.com/apis): Browseable list of HSBC's published API products.
+- [Interactive API demo with code](https://develop.hsbc.com/interactive-api-demo-code): HSBC's interactive request/response demo surface.
+
+## Security
+- [security.txt](https://hsbc.com/.well-known/security.txt): RFC 9116 disclosure record (group-wide).
+- [HSBC VDP (Bugcrowd)](https://bugcrowd.com/engagements/hsbc-vdp-pro): Managed vulnerability disclosure program.
+- responsible-disclosure@hsbc.com: Disclosure contact.
+
+## Company
+- [HSBC USA website](https://www.us.hsbc.com/): US retail/commercial site.
+- [About HSBC USA](https://www.about.us.hsbc.com): US newsroom and corporate information.
+- [Privacy Notice](https://www.us.hsbc.com/privacy-notice/)
+- [Customer Service](https://www.us.hsbc.com/customer-service/)
+
+## Notes
+- No publicly downloadable OpenAPI/Swagger/GraphQL/AsyncAPI specification is reachable unauthenticated; specs sit behind portal registration/login.
+- Consumer-permissioned US account data is aggregator-mediated (Plaid/MX/Akoya/Finicity), not served by a documented first-party consumer data API.
