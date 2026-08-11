@@ -68,6 +68,10 @@ apis:
   - type: Portal
     url: https://developer.hsbc.com
 common:
+- type: Blog
+  url: https://www.us.hsbc.com/investments/insights/
+- type: SignUp
+  url: https://www.us.hsbc.com/register/
 - type: Website
   url: https://www.us.hsbc.com/
 - type: DeveloperPortal
