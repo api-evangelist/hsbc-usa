@@ -32,6 +32,15 @@ deliveryModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- United States
+- Corporate Banking
+- Transaction Banking
+- Wealth Management
+- Open Finance
+- Payments
+tags_raw:
 - Financial Services
 - Banking
 - United States
@@ -70,6 +79,10 @@ apis:
     behind portal registration/login.
   humanURL: https://develop.hsbc.com/api-overview/omni-collect-single-api
   tags:
+  - Collection
+  - Receivables
+  - Corporate Banking
+  tags_raw:
   - Collections
   - Receivables
   - Corporate Banking
