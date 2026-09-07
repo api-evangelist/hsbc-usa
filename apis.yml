@@ -141,3 +141,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-parent: hsbc
+x-relationship: product
