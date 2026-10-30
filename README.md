@@ -1,4 +1,4 @@
-# HSBC USA (hsbc-usa)
+# HSBC USA
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,84 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-HSBC USA is the United States arm of HSBC Holdings plc, operating principally through HSBC Bank USA, N.A., a nationally chartered bank supervised by the Office of the Comptroller of the Currency (OCC). After exiting mass-market domestic retail banking in 2022 — selling its East Coast branches and national online deposit business to Citizens and its West Coast branches to Cathay Bank — HSBC refocused its US operations on global wholesale, commercial and corporate banking, global banking and markets, and wealth management for internationally connected clients.
+HSBC USA is the United States arm of HSBC Holdings plc, operating principally through HSBC Bank USA, N.A., a nationally chartered bank supervised by the Office of the Comptroller of the Currency (OCC). After exiting mass-market domestic retail banking in 2022 — selling its East Coast branches and national online deposit business to Citizens and its West Coast branches to Cathay Bank — HSBC refocused its US operations on global wholesale, commercial and corporate banking, global banking and markets, and wealth management for internationally connected clients. On the open-finance front, HSBC USA does not publish a US-specific first-party developer program; public API access is provided through HSBC's group-wide corporate and institutional Developer Portal (developer.hsbc.com), whose transaction-banking API products serve US wholesale clients but require registration and login to reach the actual API reference and specifications. There is no publicly downloadable OpenAPI, and consumer-permissioned data access for remaining US accounts is mediated through third-party aggregators rather than a documented first-party consumer data-sharing API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/hsbc-usa/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/hsbc-usa/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Corporate Banking · Transaction Banking · Wealth Management · Open Finance · Payments
 
-## Open-Finance / API Posture
+## HSBC USA on APIs.io
 
-HSBC USA does not run a US-specific first-party developer program. Public API access is provided through HSBC's **group-wide corporate and institutional Developer Portal** at [developer.hsbc.com](https://developer.hsbc.com) (which redirects to `develop.hsbc.com`), a registration-gated portal whose transaction-banking API products serve wholesale clients globally, including HSBC USA corporate relationships.
+Everything profiled for HSBC USA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hsbc-usa/](https://apis.io/providers/hsbc-usa/)** — or go straight to one of the APIs or properties below.
 
-- **Developer portal:** confirmed live (HTTP 200) at `https://developer.hsbc.com`.
-- **Spec provenance:** No publicly downloadable OpenAPI/Swagger. API reference and specifications sit behind portal registration/login (`/user/register`, `/user/login`), so nothing was harvested into `openapi/`.
-- **FDX / CFPB 1033:** No HSBC-published US FDX participation or Section 1033 data-access posture was located; not asserted here.
-- **Consumer data access:** Consumer-permissioned data for remaining US accounts is mediated through third-party aggregators (e.g. Plaid/MX/Akoya/Finicity networks) rather than a documented first-party consumer data-sharing API.
+### APIs (2)
 
-## Tags
+- [Treasury - Payment Initiation](https://apis.io/apis/hsbc-usa/treasury-payment-initiation/) — HSBC group corporate transaction-banking API for initiating outbound payments programmatically, documented on HSBC's Developer Portal and available to…
+- [Omni Collect - Single API](https://apis.io/apis/hsbc-usa/omni-collect/) — HSBC group corporate collections API consolidating multiple collection and receivables channels behind a single interface, documented on HSBC's Developer…
 
-- Financial Services
-- Banking
-- United States
-- Corporate Banking
-- Transaction Banking
-- Wealth Management
-- Open Finance
-- Payments
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+#### Security (2)
 
-## APIs
+Authentication, trust centre, and vulnerability disclosure.
 
-### Treasury - Payment Initiation
+- [Hsbc Usa Domain Security](https://apis.io/security/hsbc-usa/hsbc-usa-domain-security/)
+- [Hsbc Usa Vulnerability Disclosure](https://apis.io/security/hsbc-usa/hsbc-usa-vulnerability-disclosure/)
 
-HSBC group corporate transaction-banking API for initiating outbound payments programmatically, documented on HSBC's Developer Portal and available to wholesale clients including HSBC USA corporate relationships. API reference and specification are behind portal registration/login.
+## Where to find this API
 
-- **Human URL:** [https://develop.hsbc.com/api-overview/treasury-payment-initiation](https://develop.hsbc.com/api-overview/treasury-payment-initiation)
-
-#### Tags
-
-- Payments
-- Treasury
-- Corporate Banking
-
-#### Properties
-
-- [Documentation](https://develop.hsbc.com/api-overview/treasury-payment-initiation)
-- [Portal](https://developer.hsbc.com)
-
-### Omni Collect - Single API
-
-HSBC group corporate collections API consolidating multiple collection and receivables channels behind a single interface, documented on HSBC's Developer Portal for wholesale clients. API reference and specification are behind portal registration/login.
-
-- **Human URL:** [https://develop.hsbc.com/api-overview/omni-collect-single-api](https://develop.hsbc.com/api-overview/omni-collect-single-api)
-
-#### Tags
-
-- Collections
-- Receivables
-- Corporate Banking
-
-#### Properties
-
-- [Documentation](https://develop.hsbc.com/api-overview/omni-collect-single-api)
-- [Portal](https://developer.hsbc.com)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.us.hsbc.com/)
-- [Developer Portal](https://developer.hsbc.com)
 - [Documentation](https://develop.hsbc.com/apis)
-- [GitHub Organization](https://github.com/hsbc)
-- [LinkedIn](https://www.linkedin.com/company/hsbc)
-- [About](https://www.about.us.hsbc.com)
-- [Privacy Policy](https://www.us.hsbc.com/privacy-notice/)
 - [Support](https://www.us.hsbc.com/customer-service/)
-- [Contact](https://develop.hsbc.com/contact-us)
+- [Blog](https://www.us.hsbc.com/investments/insights/)
+- [Security](https://bugcrowd.com/engagements/hsbc-vdp-pro)
+- [Privacy policy](https://www.us.hsbc.com/privacy-notice/)
+- [GitHub](https://github.com/hsbc)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 17.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 23.7 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 12.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hsbc-usa/](https://apis.io/providers/hsbc-usa/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HSBC USA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hsbc-usa/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
